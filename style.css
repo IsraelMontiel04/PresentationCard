@@ -117,6 +117,7 @@ p {
 /* Tarjeta con perspectiva 3D */
 .card-container {
     perspective: 1000px;
+    cursor: pointer;
 }
 
 /* Estilo general de la tarjeta */
@@ -147,10 +148,6 @@ p {
     background: #002244;
     color: white;
     transform: rotateY(180deg);
-}
-
-.card-container:hover .card {
-    transform: none;
 }
 
 .card.flipped {
