@@ -1,18 +1,21 @@
+/* Reseteo de márgenes y padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos básicos */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: #f4f4f4; /* Fondo más claro para resaltar el contenido */
+    background: #f4f4f4;
     font-family: sans-serif;
 }
 
+/* Estilos generales para el contenedor de la tarjeta */
 .container {
     width: 400px;
     padding: 20px;
@@ -23,6 +26,7 @@ body {
     overflow: hidden;
 }
 
+/* Estilos para la forma (la parte superior de la tarjeta) */
 .shape {
     background-color: #002244;
     height: 220px;
@@ -33,10 +37,8 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
 }
-.negritas{
-    font-weight: bold;
-    font-size: 15px;
-}
+
+/* Estilos de la imagen */
 .image {
     height: 200px;
     width: 170px;
@@ -49,9 +51,9 @@ body {
     transform: translateX(-50%);
     border-radius: 25%;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    
 }
 
+/* Títulos y texto */
 h3 {
     margin-top: 80px;
     font-size: 18px;
@@ -60,7 +62,6 @@ h3 {
 
 .title {
     font-size: 16px;
-    
     margin: 5px 0;
     font-weight: bold;
 }
@@ -72,7 +73,7 @@ p {
     padding: 10px 20px;
 }
 
-/* Estilos de los iconos */
+/* Estilo de los iconos */
 .icons {
     display: flex;
     justify-content: space-between;
@@ -80,8 +81,9 @@ p {
     width: 100%;
     padding: 0 20px;
 }
+
 .icons img {
-    width: 180px;  /* Ajusta el tamaño de la imagen decorativa */
+    width: 180px;
     height: auto;
 }
 
@@ -112,11 +114,12 @@ p {
     color: white;
 }
 
-
+/* Tarjeta con perspectiva 3D */
 .card-container {
-    perspective: 1000px; /* Profundidad 3D */
+    perspective: 1000px;
 }
 
+/* Estilo general de la tarjeta */
 .card {
     width: 400px;
     height: 500px;
@@ -125,11 +128,12 @@ p {
     transition: transform 0.6s ease-in-out;
 }
 
+/* Cara frontal y trasera de la tarjeta */
 .front, .back {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* Oculta el reverso */
+    backface-visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,3 +157,101 @@ p {
     transform: rotateY(180deg);
 }
 
+/* Media queries para hacer la tarjeta responsiva */
+
+/* Para pantallas de móvil */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+    }
+
+    .image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .shape {
+        width: 100%;
+        height: 200px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .icons img {
+        width: 120px;
+    }
+
+    .icons a {
+        width: 35px;
+        height: 35px;
+    }
+
+    .icons i {
+        font-size: 18px;
+    }
+}
+
+/* Para pantallas de tablet */
+@media (max-width: 1024px) {
+    .container {
+        width: 80%;
+    }
+
+    .card {
+        width: 80%;
+        height: auto;
+    }
+
+    .image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .shape {
+        width: 100%;
+        height: 220px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .title {
+        font-size: 15px;
+    }
+
+    p {
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+
+    .icons img {
+        width: 150px;
+    }
+
+    .icons a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icons i {
+        font-size: 20px;
+    }
+}
